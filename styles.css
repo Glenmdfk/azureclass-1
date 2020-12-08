@@ -1,21 +1,156 @@
-* {
-  font-family: Arial, Helvetica, sans-serif;
+*{
+margin: 0;
+padding: 0;
 }
 
-html, body {
-  margin: 0;
-  border: 0;
-  padding: 0;
-  background-color: #fff;
+html {
+    font-family: 'Segoe UI';
+    font-size: 10px;
+}
+.checkbox {
+    display: none; 
+}
+/*====================================Comienza_Menú=====================================================================*/
+/*Formato de accionador*/
+.checkbox:checked ~ .menu {
+    left: -12%;
+    position: absolute;
+    transition: left 0.4;
+}
+.menu {
+    width: 15%;
+    height: 7%;
+    display: flex;
+    text-indent: 25px;
+    align-items: center;
+    background: #262a2e;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    font-size: 18px;
+    color: white;
+    transition: left 0.4s;
+}
+.menu:hover{
+	color: white;
+    border-width: 0 0;
+    background: #212528;
+    transition: 0.4s;
+}
+.menu img {
+	filter: invert(60%);
+	width: 4%;
+	transition: 0s;
+	padding: 0 0 0 88%;
+	/*padding-left: 90%;*/
+}
+.checkbox:checked ~ .menu img {
+    padding: 0 88% 0 0;
+    transition: 0s;
+    transform: rotate(180deg);
+}
+.menu:hover img{
+    filter: invert(100%);
+    transition: 0s;
+}
+/*Formato de la barra Lateral*/
+.checkbox:checked ~ .left-panel {
+    left: -12%;
+    position: absolute;
+    transition: left 0.4;
+    color: black;
+}
+.checkbox:checked ~ .left-panel li {
+    color: #2f353a;
+    transition: color 0.8s;
+}
+.left-panel {
+    width: 15%;
+    height: 93%;
+    background: #2f353a;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transition: left 0.4s;
+}
+.left-panel ul {
+	list-style: none;
+    color: #F7F7F7;
+    text-decoration: none;
 }
 
-main {
-  margin: auto;
-  width: 50%;
-  padding: 20px;
+.left-panel li {
+    font-size: 14px;
+    padding: 12px; 
+    display: block;
+    left: -13%;
+    color: white;
+    text-decoration: none;
 }
 
-main > h1 {
-  text-align: center;
-  font-size: 3.5em;
+.left-panel ul a li:hover {
+    color: white;
+    background: #20a8d8;
+    text-decoration: none;
+    transition: 0.7s;
+}
+
+.left-panel ul a li img {
+    filter: invert(100%);
+    width: 16px;
+
+}
+
+.left-panel a:link, a:visited, a:active {
+    text-decoration:none;
+}
+h1 {
+	font-size: 1.2rem;
+	font-family:"Segoe UI";
+	text-indent: 13px;
+	display: inherit; 
+}
+/*====================================Termina_Menú=====================================================================*/
+
+/*====================================Comienza Contenido=====================================================================*/
+
+.dashboard {
+    width: 85%;
+    height: 100%;
+    top: 0%;
+    left: 15%;
+    font-size: 24px;
+    text-align: left;
+    text-indent: 15px;
+    background: #2f385a;
+    position: absolute;
+    color: white;
+    transition: 0.4s;
+}
+.checkbox:checked ~ .dashboard {
+    left: 3%;
+    width: 97%;
+    position: absolute;
+    transition: 0.4s;
+}
+
+.contenido {
+	display: none;
+    width: 85%;
+    height: 100%;
+    top: 0%;
+    left: 15%;
+    font-size: 24px;
+    text-align: left;
+    text-indent: 15px;
+    background: #000000;
+    position: absolute;
+    color: white;
+    transition: 0.4s;
+}
+.checkbox:checked ~ .contenido {
+    left: 3%;
+    width: 97%;
+    position: absolute;
+    transition:  0.4s;
 }
